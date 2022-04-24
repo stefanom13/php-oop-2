@@ -12,9 +12,7 @@ class Utente {
         $this->indirizzo = $_indirizzo;
     }
 
-    public function getNome(){
-        return "{$this->nome}<br>{$this->cognome}<br>{$this->indirizzo}";
-    }
+    
 }
 
 ?>

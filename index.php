@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/Utente.php';
 require_once __DIR__ . '/models/prodotti.php';
+require_once __DIR__ . '/models/carrello.php';
 
 $prodotto1 = new prodotto(
     'Medicinale',
@@ -40,6 +41,31 @@ $prodotto1 = new prodotto(
   );
   var_dump($prodotto1, $prodotto2, $prodotto3, $prodotto4,$prodotto5);
 
+  $carrello1 = new carrello(
+    [],
+    '',
+    ''
+  );
+  $carrello1->addProdotti($prodotto2);
+  $carrello1->addProdotti($prodotto4);
+  $carrello1->addProdotti($prodotto4);
+  $carrello1->addProdotti($prodotto5);
+  $carrello1->calcTot();
+  $carrello1->countTotProdotti();
 
+
+$carrello2 = new carrello(
+    [],
+    '',
+    ''
+  );
+  $carrello2->addProdotti($prodotto2);
+  $carrello2->addProdotti($prodotto1);
+  $carrello2->addProdotti($prodotto3);
+  $carrello2->addProdotti($prodotto5);
+  $carrello2->calcTot();
+  $carrello2->countTotProdotti();
+
+//   var_dump($carrello2);
 
 ?>
