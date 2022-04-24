@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__.'/models/ospite.php';
+    require_once __DIR__.'/ospite.php';
 
     class Utente extends ospite{
     

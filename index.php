@@ -1,8 +1,10 @@
 <?php
 
-require_once __DIR__ . '/Utente.php';
+require_once __DIR__ . '/models/Utente.php';
 require_once __DIR__ . '/models/prodotti.php';
 require_once __DIR__ . '/models/carrello.php';
+require_once __DIR__ . '/models/ospite.php';
+require_once __DIR__ . '/models/CreditCard.php';
 
 $prodotto1 = new prodotto(
     'Medicinale',
@@ -67,5 +69,17 @@ $carrello2 = new carrello(
   $carrello2->countTotProdotti();
 
 //   var_dump($carrello2);
+
+$card1 = new creditCard(
+    1234567890981312,
+    '',
+    187
+  );
+  $card1->setScadenza('01-24');
+  $card2 = new creditCard(
+    9873981321765341,
+    '07-24',
+    976,
+  );
 
 ?>

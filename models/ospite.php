@@ -1,4 +1,5 @@
 <?php
+ require_once __DIR__. '/CreditCard.php';
 class ospite{
 
     public $nome;
