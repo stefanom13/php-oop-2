@@ -70,16 +70,42 @@ $carrello2 = new carrello(
 
 //   var_dump($carrello2);
 
-$card1 = new creditCard(
+$card1 = new CreditCard(
     1234567890981312,
     '',
     187
   );
   $card1->setScadenza('01-24');
-  $card2 = new creditCard(
+  $card2 = new CreditCard(
     9873981321765341,
     '07-24',
     976,
   );
+
+  $user1 = new Utente(
+    'Franco',
+    'Rossi',
+    'Francorossi@gmail.com',
+    'Libidine23',
+    'via Ezio Scida 32',
+    '1234567890',
+    $card1,
+    $carrello1,
+  );
+  $user1->getSconto();
+  var_dump($user1);
+
+  $ospite1 = new ospite(
+    'Giovanni',
+    'Grigi',
+    'ggrigio@gmail.com',
+    'Via dei conquistatori 22',
+    '3468748872',
+    $card2,
+    $carrello2,
+  );
+
+  
+  var_dump($ospite1);
 
 ?>
